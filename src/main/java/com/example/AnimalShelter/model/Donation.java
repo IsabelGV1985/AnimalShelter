@@ -20,6 +20,9 @@ import lombok.Setter;
         @Column(name = "user_name")
         private String user_name;
 
+        @Column(name = "donor_email")
+        private String donor_email;
+
         @Column(name = "amount")
         private int donation_amount;
 
