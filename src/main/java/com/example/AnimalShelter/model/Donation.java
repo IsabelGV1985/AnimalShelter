@@ -29,4 +29,8 @@ import lombok.Setter;
         @Column(name = "donation_date")
         private String donation_date;
 
+        @ManyToOne(fetch = FetchType.LAZY)
+        @JoinColumn(name = "user_id", nullable = false)
+        private User user;
+
 }

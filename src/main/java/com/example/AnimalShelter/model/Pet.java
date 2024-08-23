@@ -35,4 +35,7 @@ public class Pet {
 
     @Column(name = "pet_description")
     private String pet_description;
+
+    @OneToOne(mappedBy = "pet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Adoption adoption;
 }

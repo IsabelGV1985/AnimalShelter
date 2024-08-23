@@ -20,4 +20,8 @@ public class Adoption {
 
     @Column(name = "adoption_date")
     private String adoption_date;
+
+    @OneToOne
+    @JoinColumn(name = "pet_id", nullable = false)
+    private Pet pet;
 }
