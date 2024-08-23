@@ -11,11 +11,11 @@ import lombok.Setter;
     @NoArgsConstructor
     @Table(name = "donation")
 
-    public class ShelterModelDonation {
+    public class Donation {
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private long Id;
+        private Long Id;
 
         @Column(name = "donor_name")
         private String donor_name;

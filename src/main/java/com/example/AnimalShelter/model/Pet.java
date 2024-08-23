@@ -1,4 +1,4 @@
 package com.example.AnimalShelter.model;
 
-public class ShelterModelUser {
+public class Pet {
 }
