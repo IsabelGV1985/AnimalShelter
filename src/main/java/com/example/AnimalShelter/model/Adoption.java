@@ -18,6 +18,6 @@ public class Adoption {
     @Column(name = "adoption_id")
     private Long id;
 
-    @Column
+    @Column(name = "adoption_date")
     private String adoption_date;
 }

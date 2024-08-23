@@ -18,21 +18,21 @@ public class Pet {
     @Column(name = "pet_id")
     private Long id;
 
-    @Column
+    @Column(name = "pet_name")
     private String pet_name;
 
-    @Column
+    @Column(name = "pet_type")
     private String pet_type;
 
-    @Column
+    @Column(name = "pet_breed")
     private String pet_breed;
 
-    @Column
+    @Column(name = "pet_gender")
     private String pet_gender;
 
-    @Column
+    @Column(name = "adoptable")
     private boolean adoptable;
 
-    @Column
+    @Column(name = "pet_description")
     private String pet_description;
 }
