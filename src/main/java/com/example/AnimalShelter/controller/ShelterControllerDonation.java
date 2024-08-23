@@ -16,6 +16,6 @@ public class ShelterControllerDonation {
 
     @DeleteMapping("/donations/{id}")
     public void deleteDonation(@PathVariable Long id) {
-    shelterServiceDonation.deleteDonationById(id);
+        shelterServiceDonation.deleteDonationById(id);
     }
 }
