@@ -10,11 +10,5 @@ public class ShelterServicePet {
     @Autowired
     IShelterRepositoryPet iShelterRepositoryPet;
 
-public void deletePetById(Long id){
-    if (iShelterRepositoryPet.existsById(id)){
-        iShelterRepositoryPet.deleteById(id);
-        } else {
-        throw new IllegalArgumentException("Pet entry does not exist");
-        }
-    }
+
 }

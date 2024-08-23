@@ -11,11 +11,4 @@ public class ShelterServiceDonation {
     @Autowired
     IShelterRepositoryDonation iShelterRepositoryDonation;
 
-    public void deleteDonationById(Long id){
-    if (iShelterRepositoryDonation.existsById(id)) {
-        iShelterRepositoryDonation.deleteById(id);
-        } else {
-        throw new IllegalArgumentException("Donation entry does not exist");
-        }
-    }
 }
