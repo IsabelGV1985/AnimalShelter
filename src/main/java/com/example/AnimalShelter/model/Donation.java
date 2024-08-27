@@ -15,16 +15,16 @@ import lombok.Setter;
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long Id;
+        private Long id;
 
-        @Column(name = "donor_name")
-        private String donor_name;
+        @Column(name = "user_name")
+        private String user_name;
 
         @Column(name = "donor_email")
         private String donor_email;
 
         @Column(name = "amount")
-        private int amount;
+        private int donation_amount;
 
         @Column(name = "donation_date")
         private String donation_date;

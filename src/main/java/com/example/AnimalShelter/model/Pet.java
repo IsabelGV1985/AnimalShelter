@@ -10,31 +10,32 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @Table(name = "pet")
+
 public class Pet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "pet_id")
-    private Long Id;
+    private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "pet_name")
+    private String pet_name;
 
-    @Column(name = "age")
-    private int age;
+    @Column(name = "pet_type")
+    private String pet_type;
 
-    @Column(name = "breed")
-    private String breed;
+    @Column(name = "pet_breed")
+    private String pet_breed;
 
-    @Column(name = "gender")
-    private String gender;
-
-    @Column(name = "description")
-    private String description;
+    @Column(name = "pet_gender")
+    private String pet_gender;
 
     @Column(name = "adoptable")
-    private Boolean adoptable;
+    private boolean adoptable;
 
+    @Column(name = "pet_description")
+    private String pet_description;
 
-
+    @OneToOne(mappedBy = "pet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Adoption adoption;
 }
