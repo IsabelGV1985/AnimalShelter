@@ -1,11 +1,8 @@
 package com.example.AnimalShelter.controller;
 
-
-import com.example.AnimalShelter.model.Adoption;
 import com.example.AnimalShelter.model.Donation;
 import com.example.AnimalShelter.service.ShelterServiceDonation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,26 +13,27 @@ import java.util.List;
 public class ShelterControllerDonation {
 
     @Autowired
-    ShelterServiceDonation shelterServiceDonation;
+    private ShelterServiceDonation shelterServiceDonation;
 
     @DeleteMapping("/donations/{id}")
-    public void deleteDonation(@PathVariable Long id) {
+    public ResponseEntity<Void> deleteDonation(@PathVariable Long id) {
         shelterServiceDonation.deleteDonationById(id);
+        return ResponseEntity.noContent().build();
     }
 
-
-    @GetMapping(path = "/donations")
-    public List<Donation> getAllDonation() {
-        return shelterServiceDonation.getAllDonation();
-    }
-
-    @GetMapping(path = "/donations")
+    @GetMapping("/donations")
     public ResponseEntity<List<Donation>> getAllDonations() {
-        List<Donation> donations = shelterServiceDonation.getAllDonation();
-        if (donations.isEmpty()) {
-            return ResponseEntity.noContent().build();
+        List<Donation> donations = shelterServiceDonation.getAllDonations();
+        return ResponseEntity.ok(donations);
+    }
+
+    @GetMapping("/donations/{id}")
+    public ResponseEntity<Donation> getDonationById(@PathVariable Long id) {
+        Donation donation = shelterServiceDonation.getDonationById(id);
+        if (donation != null) {
+            return ResponseEntity.ok(donation);
         } else {
-            return ResponseEntity.ok(donations);
+            return ResponseEntity.notFound().build();
         }
     }
 }

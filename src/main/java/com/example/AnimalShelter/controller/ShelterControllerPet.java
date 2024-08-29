@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/pets")
+@RequestMapping("/pet")
 public class ShelterControllerPet {
 
     @Autowired
@@ -22,14 +22,13 @@ public class ShelterControllerPet {
     }
 
     @GetMapping("/pets")
-    public List<Pet> getAllPets() {
-        return shelterServicePet.findAll();
+    public List<Pet> getAllPet() {
+    return shelterServicePet.getAllPet();
     }
 
-    @GetMapping("/pets/{id}")
-    public ResponseEntity<Pet> getPetById(@PathVariable Long id) {
-        return shelterServicePet.findById(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+    @GetMapping("/pet/{id}")
+    public Pet getPetById(@PathVariable("id") Long id) {
+    return shelterServicePet.getById(id);
     }
+
 }
