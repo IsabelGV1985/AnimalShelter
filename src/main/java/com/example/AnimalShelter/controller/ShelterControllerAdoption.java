@@ -12,5 +12,3 @@ public class ShelterControllerAdoption {
     @Autowired
     ShelterServiceAdoption shelterServiceAdoption;
 }
-
-

@@ -2,13 +2,17 @@ package com.example.AnimalShelter.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Date;
 
     @Entity
     @Getter
     @Setter
     @NoArgsConstructor
+    @AllArgsConstructor
     @Table(name = "donation")
 
     public class Donation {
