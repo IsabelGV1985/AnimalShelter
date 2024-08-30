@@ -1,9 +1,9 @@
 package com.example.AnimalShelter.service;
 
-import com.example.AnimalShelter.model.Donation;
-import com.example.AnimalShelter.repositories.IShelterRepositoryDonation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.example.AnimalShelter.repositories.IShelterRepositoryDonation;
 
 @Service
 public class ShelterServiceDonation {

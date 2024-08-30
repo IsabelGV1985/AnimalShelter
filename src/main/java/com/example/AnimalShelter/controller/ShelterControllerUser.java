@@ -1,21 +1,32 @@
 package com.example.AnimalShelter.controller;
 
-import com.example.AnimalShelter.service.ShelterServiceUser;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/")
+import com.example.AnimalShelter.model.AuthResponseDto;    
+import com.example.AnimalShelter.model.RegisterRequestDto;
+import com.example.AnimalShelter.service.ShelterServiceUser;
+
+
+@RestController 
+@RequestMapping("/api")
 public class ShelterControllerUser {
 
     @Autowired
     ShelterServiceUser shelterServiceUser;
 
-    @DeleteMapping("/users/{id}")
-    public void deleteUser(@PathVariable Long id) {
-        shelterServiceUser.deleteUserById(id);
+    @PostMapping(path = "/auth/signup")
+    public ResponseEntity<AuthResponseDto> register(@RequestBody RegisterRequestDto request){
+        return ResponseEntity.ok(shelterServiceUser.register(request));
     }
+
+    @PostMapping(path = "/auth/signin")
+    public ResponseEntity<AuthResponseDto> register(@RequestBody UserDto request){
+        return ResponseEntity.ok(shelterServiceUser.authenticate(request));
+    }
+    
 }
