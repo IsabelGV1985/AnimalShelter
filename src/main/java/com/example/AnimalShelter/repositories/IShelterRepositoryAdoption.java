@@ -1,4 +1,7 @@
 package com.example.AnimalShelter.repositories;
 
-public interface IShelterRepositoryAdoption {
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.AnimalShelter.model.Adoption;
+
+public interface IShelterRepositoryAdoption extends JpaRepository<Adoption, Long> {
 }

@@ -18,6 +18,14 @@ public class Adoption {
     @Column(name = "adoption_id")
     private Long id;
 
+    @Column(name = "user_id")
+    private String user_id;
+
+    @Column(name = "pet_id")
+    private String pet_id;
+
     @Column(name = "adoption_date")
     private String adoption_date;
+
+
 }
