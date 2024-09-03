@@ -75,6 +75,7 @@ public class JwtService {
             .setIssuedAt(Date.from(now))
             .setExpiration(Date.from(now.plus(expiration, ChronoUnit.MILLIS)))
             .signWith(getSignInKey(), SignatureAlgorithm.HS256)
+            .setHeaderParam("typ", "JWT")
             .compact();
     }
     

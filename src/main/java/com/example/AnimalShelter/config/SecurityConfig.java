@@ -32,6 +32,7 @@ public class SecurityConfig {
 
         httpSecurity.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth ->auth.requestMatchers(publicEndpoints()).permitAll()
+                .requestMatchers("/api/donations").permitAll() //.hasAnyAuthority("ADMIN", "USER")
                     .anyRequest().authenticated())
 
                 .sessionManagement(session -> session.sessionCreationPolicy(STATELESS))
@@ -44,10 +45,6 @@ public class SecurityConfig {
     private RequestMatcher publicEndpoints(){
         return new OrRequestMatcher(
             new AntPathRequestMatcher("/api/auth/**")
-            /* 
-            .requestMatchers(GET,"/api/v1/donations/**").hasAnyRole(ADMIN.name())
-            .requestMatchers(GET, "/api/v1/news/**").hasAnyAuthority(ADMIN_READ.name())
-            */  
         );
     }
     @Bean
@@ -55,7 +52,7 @@ public class SecurityConfig {
             UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
             CorsConfiguration config = new CorsConfiguration();
             config.setAllowCredentials(true);
-            config.addAllowedOrigin("http://localhost:3000"); // CORS configuration
+            config.addAllowedOrigin("http://127.0.0.1:5500"); // CORS configuration
             config.addAllowedHeader("*");
             config.addAllowedMethod("*"); // Permitir todos los métodos
             source.registerCorsConfiguration("/**", config);

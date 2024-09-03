@@ -1,5 +1,8 @@
 package com.example.AnimalShelter.model;
 
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -38,6 +41,7 @@ import lombok.Setter;
         private String donation_date;
 
         @ManyToOne(fetch = FetchType.LAZY)
+        @JsonBackReference
         @JoinColumn(name = "user_id", nullable = false)
         private User user;
 

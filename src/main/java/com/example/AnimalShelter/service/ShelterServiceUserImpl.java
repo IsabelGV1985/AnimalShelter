@@ -56,6 +56,9 @@ public class ShelterServiceUserImpl implements ShelterServiceUser {
         return AuthResponseDto.builder().token(jwtToken).build(); 
     }
 
+
+    
+
 }
 
 

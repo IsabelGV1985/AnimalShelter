@@ -6,7 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.example.AnimalShelter.model.User;
 
-
 public interface IShelterRepositoryUser extends CrudRepository <User, Long> {
     Optional<User> findUserById(Long id);
     Optional<User> findUserByUsername(String username);
