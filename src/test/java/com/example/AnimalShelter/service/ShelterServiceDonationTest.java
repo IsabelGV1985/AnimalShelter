@@ -46,7 +46,7 @@ public class ShelterServiceDonationTest {
             return saveDonation;
         });
 
-        Donation createDonation = ShelterServiceDonation.createDonation(donation);
+        Donation createDonation = shelterServiceDonation.   createDonation(donation);
         assertNotNull(createDonation);
         assertEquals(1L, createDonation.getId());
         assertEquals("Isabel", createDonation.getUser_name());

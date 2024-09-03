@@ -32,16 +32,16 @@ public class ShelterServicePetTest {
         pet.setPet_type("Rabbit");
         pet.setPet_breed("German Belier");
         pet.setPet_gender("Male");
-        pet.setAdoptable("yes");
-        pet.getPet_description("description of the animal");
+        pet.setAdoptable(true);
+        pet.getPet_description();
 
         when(shelterRepositoryPet.save(pet)).thenAnswer(invocation -> {
             Pet savePet = invocation.getArgument(0);
-            setPet.setId(1L);
-            return setPet;
+            savePet.setId(1L);
+            return savePet;
         });
 
-        Pet createPet = ShelterServicePet.createPet(Pet);
+        Pet createPet = shelterServicePet.createPet(pet);
         assertNotNull(createPet);
         assertEquals(1L, createPet.getId());
         assertEquals("Bolita", createPet.getPet_name());
