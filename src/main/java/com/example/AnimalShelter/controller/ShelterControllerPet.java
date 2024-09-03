@@ -20,7 +20,7 @@ public class ShelterControllerPet {
 
     @PostMapping
     public ResponseEntity<Pet> createPet(@RequestBody Pet pet) {
-        Pet createPet = ShelterServicePet.createPet(pet);
+        Pet createPet = shelterServicePet.createPet(pet);
         return ResponseEntity.ok(createPet);
 
     }

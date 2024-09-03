@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class ShelterControllerAdoption {
 
     @Autowired
-    ShelterControllerAdoption shelterControllerAdoption;
+    private ShelterServiceAdoption shelterServiceAdoption;
+
 
     @PostMapping
     public ResponseEntity<Adoption> createAdoption(@RequestBody Adoption adoption) {
