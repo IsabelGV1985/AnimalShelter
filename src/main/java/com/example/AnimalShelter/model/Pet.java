@@ -38,4 +38,5 @@ public class Pet {
 
     @OneToOne(mappedBy = "pet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Adoption adoption;
+
 }

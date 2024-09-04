@@ -23,7 +23,7 @@ public class ShelterControllerAdoption {
 
     }
     @GetMapping(path = "/adoptions")
-    public List<Adoption> getAllAdoptions() {
+    public List<Adoption> getAllAdoption() {
         return shelterServiceAdoption.getAllAdoption();
     }
 
