@@ -24,7 +24,7 @@ import java.util.List;
 public class ShelterServiceDonationTest {
 
     @Mock
-    private IShelterRepositoryDonation ishelterRepositoryDonation;
+    private IShelterRepositoryDonation iShelterRepositoryDonation;
 
     @InjectMocks
     private ShelterServiceDonation shelterServiceDonation;
@@ -35,30 +35,29 @@ public class ShelterServiceDonationTest {
     }
 
 
-
         @Test
     void testGetAllDonation() {
         ArrayList<Donation> DonationList = new ArrayList<>();
         Donation donation = new Donation();
         DonationList.add(donation);
 
-        when(ishelterRepositoryDonation.findAll()).thenReturn(DonationList);
+        when(iShelterRepositoryDonation.findAll()).thenReturn(DonationList);
 
         List<Donation> result = shelterServiceDonation.getAllDonations();
 
         assertNotNull(result);
         assertEquals(1, result.size());
-        verify(ishelterRepositoryDonation, times(1)).findAll();
+        verify(iShelterRepositoryDonation, times(1)).findAll();
     }
 
     @Test
     void testGetDonationById() {
         Donation donation = new Donation();
-        when(ishelterRepositoryDonation.findById(1L)).thenReturn(Optional.of(donation));
+        when(iShelterRepositoryDonation.findById(1L)).thenReturn(Optional.of(donation));
 
-        Donation result = shelterServiceDonation.getById(1L);
+        Donation result = shelterServiceDonation.getDonationById(1L);
 
         assertNotNull(result);
-        verify(ishelterRepositoryDonation, times(1)).findById(1L);
+        verify(iShelterRepositoryDonation, times(1)).findById(1L);
     }
 }
