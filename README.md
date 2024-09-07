@@ -1,4 +1,12 @@
-# AnimalShelter
+# AnimalShelter disclaimer:
+
+## It would not be fair not to make reference in this project to several important topics outside the team, both training and Team 3, but which I believe are vitally important when it comes to understanding the result:
+
+## * 1º The team was literally hit by illnesses of up to two of the team's relatives, denoting the team's resilience and how it grows in the face of adversity.
+## * 2º The team was changed in up to three components, of the 4 that started, two left at two different times of the project, and only one came in that was admitted in a wonderful way, understanding the previous point, not letting the team get carried away by a possible mistake. atmosphere, on the contrary, laughter has abounded.
+## * 3ºProblems in the Frontend that happened to the training team and that did not respond, so the team decided to create its own frontend to present a fully Viable MVP, leaving the work with docker and testing to later deliveries, even more so if we are now with continuous integration.
+
+## In conclusion, it has been a pleasure to work with these people on this project.
 
 ## Project Context: 
 
@@ -49,6 +57,7 @@ Update Pets: Allow administrators to modify existing pet information.
 Remove Pets: Allow administrators to remove a pet from the system.
 
 Donations.
+we have done at least one test ShelterControllerDonationTest.java
 
 
 ## The documentation ;) Summary of the work carried out, in the Backend and the frontend.
