@@ -59,8 +59,8 @@ Remove Pets: Allow administrators to remove a pet from the system.
 Donations.
 we have done at least one test ShelterControllerDonationTest.java
 
-![KEY POINTS](3.png)
-
+![KEY POINTS](10.png)
+![KEY POINTS](11.png)
 
 ## The documentation ;) Summary of the work carried out, in the Backend and the frontend.
 ## * [Documentación](https://www.canva.com/design/DAGPCTrZu7E/k1Q57W3Ly6OPjzhIyYFF_Q/view?utm_content=DAGPCTrZu7E&utm_campaign=designshare&utm_medium=link&utm_source=editor)
