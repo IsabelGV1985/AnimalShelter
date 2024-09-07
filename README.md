@@ -66,5 +66,7 @@ we have done at least one test ShelterControllerDonationTest.java
 
 ## Panel de Administración del Frontend
 ![KEY POINTS](https://github.com/IsabelGV1985/AnimalShelter/blob/main/16.jpg)
+
+![KEY POINTS](https://github.com/IsabelGV1985/AnimalShelter/blob/main/12.jpg)
 ## The documentation ;) Summary of the work carried out, in the Backend and the frontend.
 ## * [Documentación](https://www.canva.com/design/DAGPCTrZu7E/k1Q57W3Ly6OPjzhIyYFF_Q/view?utm_content=DAGPCTrZu7E&utm_campaign=designshare&utm_medium=link&utm_source=editor)
