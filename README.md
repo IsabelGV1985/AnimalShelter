@@ -63,5 +63,8 @@ we have done at least one test ShelterControllerDonationTest.java
 ## Diagrama Spring Security
 ![KEY POINTS](https://github.com/IsabelGV1985/AnimalShelter/blob/main/11.jpg)
 
+
+## Panel de Administración del Frontend
+![KEY POINTS](https://github.com/IsabelGV1985/AnimalShelter/blob/main/12.jpg)
 ## The documentation ;) Summary of the work carried out, in the Backend and the frontend.
 ## * [Documentación](https://www.canva.com/design/DAGPCTrZu7E/k1Q57W3Ly6OPjzhIyYFF_Q/view?utm_content=DAGPCTrZu7E&utm_campaign=designshare&utm_medium=link&utm_source=editor)
