@@ -34,11 +34,9 @@ public class ShelterControllerDonation {
     @PostMapping("/donations")
     public ResponseEntity<String> createDonation(@RequestBody DonationDTO donationDTO) {
         try {
-            // Buscar el usuario por username
             User user = userRepository.findUserByUsername(donationDTO.getUsername())
                                       .orElseThrow(() -> new ResourceNotFoundException("User not found"));
 
-            // Crear la donación
             Donation donation = new Donation();
             donation.setUsername(donationDTO.getUsername());
             donation.setDonor_email(donationDTO.getDonorEmail());
@@ -50,13 +48,12 @@ public class ShelterControllerDonation {
 
             donation.setUser(user);
 
-            // Guardar la donación
             Donation createdDonation = shelterServiceDonation.createDonation(donation);
 
-            // Retornar la donación creada
+
             return new ResponseEntity<>("Donación creada exitosamente con ID: " + createdDonation.getId(), HttpStatus.CREATED);
         } catch (Exception e) {
-            // Retornar mensaje de error
+            
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear donación: " + e.getMessage());
         }
     }

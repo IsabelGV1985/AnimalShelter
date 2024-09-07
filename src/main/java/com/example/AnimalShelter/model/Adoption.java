@@ -1,5 +1,7 @@
 package com.example.AnimalShelter.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -32,6 +34,7 @@ public class Adoption {
 
     @OneToOne
     @JoinColumn(name = "pet_id", nullable = false)
+    @JsonBackReference
     private Pet pet;
 
     @ManyToOne(fetch = FetchType.LAZY)

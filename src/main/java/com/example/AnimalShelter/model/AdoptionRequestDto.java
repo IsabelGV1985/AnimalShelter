@@ -13,14 +13,10 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class PetDto {
-    private String pet_name;
-    private String pet_breed;
-    private boolean adoptable;
-    private User user;
+public class AdoptionRequestDto {
+    private String username;
+    private Long petId;
+    private Long userId;
+    
+ 
 }
-
-
-
-

@@ -60,7 +60,6 @@ public class User implements UserDetails {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval= true , fetch = FetchType.LAZY)
     @JsonManagedReference
-    
     private List<Adoption> adoptions;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval= true ,fetch = FetchType.LAZY)

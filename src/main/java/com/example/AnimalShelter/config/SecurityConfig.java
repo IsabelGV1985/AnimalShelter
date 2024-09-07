@@ -32,7 +32,9 @@ public class SecurityConfig {
 
         httpSecurity.csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth ->auth.requestMatchers(publicEndpoints()).permitAll()
-                .requestMatchers("/api/donations").permitAll() //.hasAnyAuthority("ADMIN", "USER")
+                .requestMatchers("/api/donations").hasAnyAuthority("ADMIN", "USER")
+                .requestMatchers("/api/pets").hasAnyAuthority("ADMIN", "USER")
+                .requestMatchers("/api/adoptions").hasAnyAuthority("ADMIN", "USER")
                     .anyRequest().authenticated())
 
                 .sessionManagement(session -> session.sessionCreationPolicy(STATELESS))
@@ -57,7 +59,7 @@ public class SecurityConfig {
             config.addAllowedMethod("*"); // Permitir todos los métodos
             source.registerCorsConfiguration("/**", config);
             return source;
-}
+        }
 
 }
 

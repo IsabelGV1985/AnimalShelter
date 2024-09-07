@@ -1,5 +1,7 @@
 package com.example.AnimalShelter.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -47,6 +49,7 @@ public class Pet {
     private String pet_description;
 
     @OneToOne(mappedBy = "pet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
     private Adoption adoption;
 
     @ManyToOne(fetch = FetchType.LAZY)
