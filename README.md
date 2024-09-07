@@ -59,7 +59,7 @@ Remove Pets: Allow administrators to remove a pet from the system.
 Donations.
 we have done at least one test ShelterControllerDonationTest.java
 
-![KEY POINTS](https://github.com/IsabelGV1985/AnimalShelter/blob/main/10.jpg))
+![KEY POINTS](https://github.com/IsabelGV1985/AnimalShelter/blob/main/10.jpg)
 ![KEY POINTS](https://github.com/IsabelGV1985/AnimalShelter/blob/main/11.png)
 
 ## The documentation ;) Summary of the work carried out, in the Backend and the frontend.
