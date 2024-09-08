@@ -1,9 +1,12 @@
 package com.example.AnimalShelter.repositories;
 
-import com.example.AnimalShelter.model.User;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.stereotype.Repository;
+import java.util.Optional;
 
-@Repository
-public interface IShelterRepositoryUser extends CrudRepository<User, Long> {
+import org.springframework.data.repository.CrudRepository;
+
+import com.example.AnimalShelter.model.User;
+
+public interface IShelterRepositoryUser extends CrudRepository <User, Long> {
+    Optional<User> findUserById(Long id);
+    Optional<User> findUserByUsername(String username);
 }

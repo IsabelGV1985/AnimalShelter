@@ -1,20 +1,12 @@
 package com.example.AnimalShelter.service;
 
-import com.example.AnimalShelter.repositories.IShelterRepositoryUser;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.example.AnimalShelter.controller.UserDto;
+import com.example.AnimalShelter.model.AuthResponseDto;
+import com.example.AnimalShelter.model.RegisterRequestDto;
 
-@Service
-public class ShelterServiceUser {
+public interface ShelterServiceUser {
 
-    @Autowired
-    IShelterRepositoryUser iShelterRepositoryUser;
+    AuthResponseDto register(RegisterRequestDto request);
 
-    public void deleteUserById(Long id) {
-        if (iShelterRepositoryUser.existsById(id)) {
-            iShelterRepositoryUser.deleteById(id);
-        } else {
-            throw new IllegalArgumentException("User does not exist");
-        }
-    }
+    AuthResponseDto authenticate(UserDto request);
 }

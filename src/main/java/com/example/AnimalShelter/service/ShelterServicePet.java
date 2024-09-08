@@ -4,7 +4,6 @@ import com.example.AnimalShelter.model.Pet;
 import com.example.AnimalShelter.repositories.IShelterRepositoryPet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -13,21 +12,23 @@ public class ShelterServicePet {
     @Autowired
     IShelterRepositoryPet iShelterRepositoryPet;
 
-public void deletePetById(Long id){
-    if (iShelterRepositoryPet.existsById(id)){
-        iShelterRepositoryPet.deleteById(id);
+    // Método para eliminar una mascota por ID
+    public void deletePetById(Long id) {
+        if (iShelterRepositoryPet.existsById(id)) {
+            iShelterRepositoryPet.deleteById(id);
         } else {
-        throw new IllegalArgumentException("Pet entry does not exist");
+            throw new IllegalArgumentException("La mascota con ID " + id + " no existe.");
         }
     }
+
+    // Método para obtener todas las mascotas
     public List<Pet> getAllPet() {
         return (List<Pet>) iShelterRepositoryPet.findAll();
     }
 
+    // Método para obtener una mascota por ID
     public Pet getById(Long id) {
-        Pet pet;
-        pet = iShelterRepositoryPet.findById(id).orElseThrow();
-        return pet;
-
+        return iShelterRepositoryPet.findById(id)
+            .orElseThrow(() -> new IllegalArgumentException("La mascota con ID " + id + " no existe."));
     }
 }
