@@ -8,6 +8,13 @@
 
 ## In conclusion, it has been a pleasure to work with these people on this project.
 
+# Team 3:
+* Jack`S-->> https://github.com/JackS1718 
+* Isabel Gutiérrez -->> https://github.com/IsabelGV1985
+* Jose M.Alonso Tirado -->> https://github.com/jmatisam
+
+* En los inicios https://github.com/MiguelAngelGSG
+
 ## Project Context: 
 
 Develop the backend of a web application for an animal shelter (Animal Shelter) using Spring Boot. 
